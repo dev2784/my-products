@@ -1,0 +1,126 @@
+@import '../../styles/variables';
+.top-bar {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background: #fff;
+& .left-logo{
+    display: flex;
+    flex-direction: column;
+    & h6{
+        color:$text-secondary;
+        font-size: 12px;
+    }
+    & h3 {
+        font-size: 24px;
+        font-family: $font-family;
+    }
+}
+
+
+& .center-logo{
+    font-size: 44px;
+    font-family: $font-family;
+    color: $text-primary;
+    text-align: center;
+}
+& .right-top-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    & .list-group-item {
+        border: 0;
+        border-radius: 100% !important;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        cursor: pointer;
+        box-shadow: 0px 3px 6px #00000029;
+    }
+    & .header-icon-btn {
+        background: #E6F0FF;
+        color: $text-primary;
+        & span.badge {
+            background: $text-primary !important;
+            position: absolute;
+            top: 0;
+            right: -8px;
+            font-size: 10px;
+        }
+    }
+    & .header-icon-img {
+        & img{
+            width: 100%;
+            border-radius: 100%;
+        }
+    }
+    & .header-icon-profile {
+        background: $text-primary;
+        color: #fff;
+        font-size: 15px;
+        font-weight: bold;    
+    }
+}
+}
+.navbar-footer {
+    background: $text-primary;
+    color: #fff;
+    padding:15px 30px;
+    box-shadow: 0px 5px 20px #2F3F5880;
+    border-radius: 0px 0px 20px 20px;
+    margin-bottom: 40px;
+    & .navbar {
+        padding: 0;
+    }
+    & .back-button {
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    & a.nav-link {
+        font-size: 16px;
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-right: 30px;
+        &:hover {
+            text-decoration: none !important;            
+            border-bottom: 1px solid;
+        }
+    }
+    & .active {
+        color: #fff !important;
+        border-bottom: 1px solid;
+    }
+    & .menu-last {
+        h3 {
+            font-size: 16px;
+            font-style: italic;
+            margin: 0;
+            cursor: pointer;
+        }
+    }
+    
+}
+
+@media (max-width: 999px) {
+    .navbar-footer {
+        padding:15px !important;
+    }
+    .navbar-collapse {
+        position: absolute;
+        top: 34px;
+        z-index: 1000;
+        background: $text-primary;
+        padding-left: 10px;
+        border-radius: 10px;
+    }
+}
+@media (max-width: 500px){
+    .center-logo{
+        font-size: 36px !important;
+    }
+}

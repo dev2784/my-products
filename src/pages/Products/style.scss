@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+.to-top{
+    padding: 70px 0 10px;
+    cursor: pointer;
+    & p{
+        width: 100%;
+        color:$text-primary;
+        text-align: center;
+
+    }
+    & svg {
+        width: 100%;
+        color:$text-primary;
+    }
+}

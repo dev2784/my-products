@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/_variables.scss";
+import "./App.scss";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./pages/Login";
+import Products from "./pages/Products";
+import GuardedRoute from "./services/RouteGuard";
+import useAuth from "./services/AuthContext";
 
 function App() {
+  const { token } = useAuth();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <BrowserRouter>
+      <Routes>
+        <Route
+          element={
+            <GuardedRoute
+              isRouteAccessible={!token}
+              redirectRoute={'/'}
+            />
+          }
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          {/* Login Route */}
+          <Route path={'/login'} element={<Login />} />
+        </Route>
+        {/* Authenticated Routes */}
+        <Route
+          element={
+            <GuardedRoute
+              isRouteAccessible={token}
+              redirectRoute={'/login'}
+            />
+          }
+        >
+          <Route path={'/'} element={<Products />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

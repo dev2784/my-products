@@ -1,0 +1,15 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/global.scss';
+
+.login-section{
+    background: url('../../assets/img/login.png');
+    height: 100vh;
+    background-size: cover;
+    padding-top: 100px;
+    & .title-desc{
+        margin-bottom: 30px;
+    }
+    & .error {
+        color:rgb(255, 54, 54);
+    }
+}

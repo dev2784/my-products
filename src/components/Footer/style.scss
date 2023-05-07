@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+.footer-container {
+    background: $text-primary;
+    padding-top: 90px;
+    padding-bottom: 60px;
+    color: #ffffff;
+    text-align: center;
+    svg{
+        width: 100%;
+    }
+    h6 {
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-family: $font-family;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,75 @@
+@import '../../styles/variables';
+@import '../../styles/global';
+.product-card{
+    box-shadow: 0px 3px 10px #00000029;
+    border-radius: 5px !important;
+    border: none;
+    margin-bottom: 15px;
+    & .img-section {
+        padding: 40px;
+        border-radius: 5px !important;
+        background: #F5F7FC;
+        & img {
+            height: 200px;
+            width: 100%;
+        }
+        & .like-section {
+            color: #fff;
+            background: $text-primary;
+            border-radius: 100%;
+            padding: 10px;
+            position: absolute;
+            top: 10px;
+            width: 30px;
+            left: 10px;
+            height: 30px;
+            cursor: pointer;
+        }
+        & .save-section {
+            position: absolute;
+            right: 5px;
+            top: 10px;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+            color: orange;
+        }
+    }
+    & .card-body {
+        display: flex;
+        flex-direction: column;
+        & .card-title.h5 {
+            font-size: 18px;
+            font-family: $font-family;
+            color:$text-primary;
+            text-align: center;
+            font-weight: 600;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        & p.card-text {
+            font-size: 14px;
+            font-family: $font-family;
+            color:$text-primary;
+            text-align: center;
+            font-weight: 600;
+        }
+        & .price {
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 21px;
+            & span {
+                text-decoration: line-through;
+                color: #9B9B9B;
+                font-size: 13px;
+            }
+        }
+        & .card-button{
+            border-radius: 5px;
+        }
+        
+    }
+}

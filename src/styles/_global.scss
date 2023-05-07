@@ -1,0 +1,63 @@
+@import './variables';
+.input {
+        border-width: 0 0 2px 0;
+        border-radius: 0;
+        font-family: $font-family;
+        &:focus{
+            border-color: $text-primary;
+            box-shadow: none;
+        }
+        &::placeholder{
+            font-family: $font-family;
+        }
+}
+label {
+    font-family: $font-family;
+}
+a {
+    color: $text-secondary;
+    text-decoration: none;
+    &:hover{
+        color:$text-secondary-hover;
+        text-decoration: underline;
+    }
+}
+.btn-prime {
+    background: $text-primary;
+    padding: 10px 20px;
+    font-family: $font-family;
+    border-radius: 0;
+    &:hover{
+        background: $text-primary-hover;
+    }
+}
+h2{
+    color: $text-primary;
+    font-family: $font-family;
+}
+p {
+    font-family: $font-family;
+    margin-bottom: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(238, 243, 255); 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #B9D0F2; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B9D0F2; 
+  }

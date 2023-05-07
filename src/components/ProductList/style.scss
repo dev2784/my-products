@@ -1,0 +1,22 @@
+@import '../../styles/variables';
+.product-container {
+    height: calc(100vh - 220px);
+    overflow: auto;
+}
+.product-count{
+    font-size: 18px;
+    margin: 15px 0 30px;
+    & span {
+        color:#BCBCBC
+    }
+}
+.active-icon{
+    margin-left: 10px;  
+    color:#7C7C7C;
+    cursor: pointer;
+}
+.inactive-icon{  
+    height: 26px;
+    color:#c0c0c0;
+    cursor: pointer;
+}
